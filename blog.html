@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights | Millet Sips</title>
+  <meta name="description"
+    content="Discover wellness tips, recipes, and insights about ancient grains and natural office nutrition.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <button class="menu-trigger" aria-label="Menu" onclick="toggleMobileNav(true)">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">
+        <span>Millet Sips</span>
+      </a>
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Partner / Franchise</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <button class="search-trigger" aria-label="Search" onclick="showToast('Search activated')">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" onclick="toggleMobileNav(false)">
+    <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span style="font-weight: 700; color: var(--primary);">Navigation</span>
+        <button onclick="toggleMobileNav(false)"
+          style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="locations.html">Locations</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Partner / Franchise</a>
+      <a href="blog.html" class="active">Blog</a>
+    </div>
+  </div>
+
+  <!-- Subpage Content -->
+  <div class="subpage-container">
+    <h1 class="subpage-title">Millet Sips Blog</h1>
+    <p class="subpage-subtitle">Wellness, ancient nutrition, and modern lifestyles.</p>
+
+    <!-- Blog Posts Grid -->
+    <div style="display: grid; gap: 32px;">
+      <!-- Post 1 -->
+      <article style="border-bottom: 1px solid var(--gray-border); padding-bottom: 24px;">
+        <span
+          style="color: var(--secondary); font-size: 13px; font-weight: 600; text-transform: uppercase;">Nutrition</span>
+        <h2 style="font-size: 24px; margin: 8px 0;"><a href="blog/millets-super-drinks.html" style="color: var(--dark); text-decoration: none;">Millets: The Super Drinks of the Day</a></h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 12px;">
+          Discover why swaping your afternoon caffeinated drinks for a millet-based brew can dramatically improve your
+          metabolic health and sustain your energy.
+        </p>
+        <span style="color: var(--text-muted); font-size: 13px;">July 8, 2026</span>
+      </article>
+
+      <!-- Post 2 -->
+      <article style="border-bottom: 1px solid var(--gray-border); padding-bottom: 24px;">
+        <span
+          style="color: var(--secondary); font-size: 13px; font-weight: 600; text-transform: uppercase;">Partnership</span>
+        <h2 style="font-size: 24px; margin: 8px 0;"><a href="blog/vending-franchise-trends.html" style="color: var(--dark); text-decoration: none;">Why Millet Vending is the Next Big Franchise Trend</a></h2>
+        <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 12px;">
+          Franchise investors are shifting to micro-retail formats. Learn how our smart vending kiosk systems achieve
+          high ROI in corporate hubs.
+        </p>
+        <span style="color: var(--text-muted); font-size: 13px;">June 24, 2026</span>
+      </article>
+    </div>
+  </div>
+
+  <!-- Sticky Bottom Navigation Bar -->
+  <nav class="sticky-bottom-nav">
+    <a href="locations.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+        </path>
+      </svg>
+      <span>FIND A KIOSK</span>
+    </a>
+    <a href="menu.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+        </path>
+      </svg>
+      <span>OUR MENU</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.099.281L7.5 9a10.518 10.518 0 004.897 4.897l1.703-1.077a1 1 0 011.02-.08l2.2.547a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
+      </svg>
+      <span>CONTACT US</span>
+    </a>
+  </nav>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

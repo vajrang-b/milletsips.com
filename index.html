@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Millet Sips | Ancient Grains, Modern Energy</title>
+  <meta name="description"
+    content="Tired of unhealthy office drinks? Discover Millet Sips: ancient grain drinks crafted for modern energy. Sugar-free, clean, and nutritious.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div id="page_preloader">
+    <div style="text-align: center;">
+      <svg style="width: 50px; height: 50px; color: var(--primary); animation: pulse 1.5s infinite;" fill="none"
+        stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707-.707m12.728 0l-.707.707M6.343 6.343l-.707-.707M14 12a2 2 0 11-4 0 2 2 0 014 0z">
+        </path>
+      </svg>
+      <div style="margin-top: 12px; font-weight: 500; color: var(--primary);">Brewing Millet Sips...</div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <button class="menu-trigger" aria-label="Menu" onclick="toggleMobileNav(true)">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">
+        <span>Millet Sips</span>
+      </a>
+      <ul class="desktop-nav">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Partner / Franchise</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="search-trigger" aria-label="Search" onclick="showToast('Search activated')">
+          <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button class="cta-button" onclick="openKioskModal()" style="padding: 8px 16px; font-size: 13px; border-radius: 20px; display: inline-flex;">Find a Kiosk</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" onclick="toggleMobileNav(false)">
+    <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span style="font-weight: 700; color: var(--primary);">Navigation</span>
+        <button onclick="toggleMobileNav(false)" style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+      </div>
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="locations.html">Locations</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Partner / Franchise</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </div>
+
+  <!-- Main Container -->
+  <main>
+
+    <!-- Hero Flow: Problem-Agitation-Solution -->
+    <section class="hero">
+      <div class="hero-subtitle">Tired of unhealthy office drinks?</div>
+      <h1 class="hero-title">Crave Fresh, Natural Energy?</h1>
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 16px;">
+        Discover <strong>Millet Sips</strong>: Ancient grains, modern energy. Freshly brewed, zesty, and 100% natural to fuel your hustle.
+      </p>
+      <button class="cta-button" onclick="openKioskModal()">
+        <span>FIND A KIOSK</span>
+        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+          </path>
+        </svg>
+      </button>
+    </section>
+
+    <!-- Why Ancient Millets Section -->
+    <section style="padding: 48px 24px; text-align: center; background: var(--gray-light); border-radius: var(--border-radius); margin: 24px;">
+      <h2 style="font-size: 28px; margin-bottom: 8px;">Why Ancient Millets?</h2>
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 16px;">Sustained energy to prevent the dreaded 3 PM office crash.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+        <div style="background: var(--light); padding: 24px; border-radius: 12px; border: 1px solid var(--gray-border); text-align: left;">
+          <div style="font-size: 24px; margin-bottom: 12px; color: var(--primary);">⚡</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; font-family: 'Outfit', sans-serif;">Slow-Release Energy</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">Low glycemic index ensures steady glucose delivery. No sharp spikes, no sudden mid-day fatigue.</p>
+        </div>
+        <div style="background: var(--light); padding: 24px; border-radius: 12px; border: 1px solid var(--gray-border); text-align: left;">
+          <div style="font-size: 24px; margin-bottom: 12px; color: var(--primary);">🌾</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; font-family: 'Outfit', sans-serif;">Nutrient Dense</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">Naturally rich in iron, magnesium, calcium, and dietary fibers that keep you focused and satisfied.</p>
+        </div>
+        <div style="background: var(--light); padding: 24px; border-radius: 12px; border: 1px solid var(--gray-border); text-align: left;">
+          <div style="font-size: 24px; margin-bottom: 12px; color: var(--primary);">💚</div>
+          <h3 style="font-size: 18px; margin-bottom: 8px; font-family: 'Outfit', sans-serif;">100% Clean Brew</h3>
+          <p style="color: var(--text-muted); font-size: 14px;">Completely gluten-free, sugar-free, dairy-free options, made with zero preservatives or chemical syrups.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Menu -->
+    <section class="menu-section" id="menu">
+      <div class="section-header">
+        <h2 class="section-title">Our Menu</h2>
+      </div>
+
+      <div class="product-grid">
+        <!-- Ragi Elaichi Chai -->
+        <div class="product-card" onclick="toggleIngredients(this)">
+          <div class="product-thumbnail-wrapper">
+            <img src="assets/menu/ragi-elaichi-chai.png" alt="Ragi Elaichi Chai" class="product-thumbnail">
+          </div>
+          <h3 class="product-title">Ragi Elaichi Chai</h3>
+          <p class="product-benefit">Earthy Finger Millet brewed with fresh Cardamom. The ultimate replacement for unhealthy office machine tea.</p>
+          <button class="ingredients-trigger" aria-expanded="false">
+            <span>INGREDIENTS</span>
+            <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="ingredients-content">
+            <strong>Key Ingredients:</strong> Finger Millet (Ragi), Fresh Elaichi (Cardamom), Natural Jaggery, Almond Milk.
+            <br><br>
+            <strong>Nutrition:</strong> 95 kcal | Rich in Calcium | High Fiber
+          </div>
+        </div>
+
+        <!-- Foxtail Lemonade -->
+        <div class="product-card" onclick="toggleIngredients(this)">
+          <div class="product-thumbnail-wrapper">
+            <img src="assets/menu/foxtail-lemonade.png" alt="Kangni Lemon Sharbat" class="product-thumbnail">
+          </div>
+          <h3 class="product-title">Kangni Lemon Sharbat</h3>
+          <p class="product-benefit">Foxtail Millet blended with zesty lemon and mint. Perfect for a refreshing afternoon cooling break.</p>
+          <button class="ingredients-trigger" aria-expanded="false">
+            <span>INGREDIENTS</span>
+            <svg style="width: 16px; height: 16px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+            </svg>
+          </button>
+          <div class="ingredients-content">
+            <strong>Key Ingredients:</strong> Foxtail Millet (Kangni), Lemon Juice, Fresh Mint, Raw Honey, Kala Namak (Black Salt).
+            <br><br>
+            <strong>Nutrition:</strong> 70 kcal | Packed with Vitamin C | Natural Cooler
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What Customers Say (Social Proof) -->
+    <section style="padding: 48px 24px; text-align: center; margin: 24px;">
+      <h2 style="font-size: 28px; margin-bottom: 8px;">What Our Community Says</h2>
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 16px;">Real feedback from busy office professionals.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto; text-align: left;">
+        <div style="background: var(--gray-light); padding: 24px; border-radius: var(--border-radius); border: 1px solid var(--gray-border);">
+          <p style="font-style: italic; color: var(--text-main); margin-bottom: 16px;">"Millet Sips saved my afternoon fatigue! I swapped out my sugary office lattes for Ragi Elaichi Chai, and I haven't crashed since."</p>
+          <strong style="display: block; font-size: 14px; color: var(--primary);">Rajesh K.</strong>
+          <span style="font-size: 12px; color: var(--text-muted);">Lead Software Engineer</span>
+        </div>
+        <div style="background: var(--gray-light); padding: 24px; border-radius: var(--border-radius); border: 1px solid var(--gray-border);">
+          <p style="font-style: italic; color: var(--text-main); margin-bottom: 16px;">"Our office building installed a Millet Sips kiosk last month, and there's always a queue. The Foxtail Lemonade is incredibly refreshing!"</p>
+          <strong style="display: block; font-size: 14px; color: var(--primary);">Sneha M.</strong>
+          <span style="font-size: 12px; color: var(--text-muted);">HR Operations Manager</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partner With Us -->
+    <section class="partner-section" id="partner">
+      <h2>Partner With Us</h2>
+      <p class="partner-description">
+        Join the Millet Revolution! Bring wellness, fresh nutrition, and a high-margin health food kiosk to your city or
+        corporate office.
+      </p>
+      <button class="cta-button partner-button" onclick="openFranchiseModal()">
+        <span>DOWNLOAD FRANCHISE KIT</span>
+        <svg style="width: 20px; height: 20px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+        </svg>
+      </button>
+    </section>
+
+  </main>
+
+  <!-- Sticky Bottom Navigation Bar -->
+  <nav class="sticky-bottom-nav">
+    <button class="nav-item" onclick="openKioskModal()">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+        </path>
+      </svg>
+      <span>FIND A KIOSK</span>
+    </button>
+    <a href="#menu" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+        </path>
+      </svg>
+      <span>OUR MENU</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.099.281L7.5 9a10.518 10.518 0 004.897 4.897l1.703-1.077a1 1 0 011.02-.08l2.2.547a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+        </path>
+      </svg>
+      <span>CONTACT US</span>
+    </a>
+  </nav>
+
+  <!-- Kiosk Locator Modal -->
+  <div class="modal" id="kioskModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeKioskModal()">&times;</button>
+      <h3 style="margin-bottom: 16px;">Find a Millet Sips Kiosk</h3>
+      <div style="max-height: 250px; overflow-y: auto; text-align: left;">
+        <div style="padding: 12px; border-bottom: 1px solid var(--gray-border);">
+          <strong>Silicon Valley Tech Park - Vending A</strong>
+          <p style="font-size: 14px; color: var(--text-muted);">Tower 2, Lobby Area (Opposite Cafeteria)</p>
+        </div>
+        <div style="padding: 12px; border-bottom: 1px solid var(--gray-border);">
+          <strong>Grand Central Corporate Arcade</strong>
+          <p style="font-size: 14px; color: var(--text-muted);">Ground Floor, East Wing Corridor</p>
+        </div>
+        <div style="padding: 12px;">
+          <strong>Downtown Wellness Plaza Kiosk</strong>
+          <p style="font-size: 14px; color: var(--text-muted);">Entrance Galleria (Next to Organics Store)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Franchise Kit Modal -->
+  <div class="modal" id="franchiseModal">
+    <div class="modal-content">
+      <button class="close-modal" onclick="closeFranchiseModal()">&times;</button>
+      <h3 style="margin-bottom: 16px;">Download Franchise Kit</h3>
+      <form id="franchiseForm" onsubmit="submitFranchiseForm(event)">
+        <div class="form-group">
+          <label for="partnerName">Name</label>
+          <input type="text" id="partnerName" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="partnerEmail">Email Address</label>
+          <input type="email" id="partnerEmail" class="form-control" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="partnerCity">Target City/Office Location</label>
+          <input type="text" id="partnerCity" class="form-control" placeholder="Enter your city/office" required>
+        </div>
+        <button type="submit" class="cta-button" style="width: 100%; border-radius: 8px;">GET KIT &amp; ROI
+          INFO</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

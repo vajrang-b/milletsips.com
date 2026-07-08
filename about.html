@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Millet Sips</title>
+  <meta name="description" content="Learn about Millet Sips: our mission to bring ancient organic millets into modern office spaces and fast-paced urban lifestyles.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <button class="menu-trigger" aria-label="Menu" onclick="toggleMobileNav(true)">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">
+        <span>Millet Sips</span>
+      </a>
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="about.html" class="active">About Us</a></li>
+        <li><a href="contact.html">Partner / Franchise</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <button class="search-trigger" aria-label="Search" onclick="showToast('Search activated')">
+          <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+          </svg>
+        </button>
+        <button class="cta-button" onclick="window.location.href='locations.html'" style="padding: 8px 16px; font-size: 13px; border-radius: 20px; display: inline-flex;">Find a Kiosk</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" onclick="toggleMobileNav(false)">
+    <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span style="font-weight: 700; color: var(--primary);">Navigation</span>
+        <button onclick="toggleMobileNav(false)" style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="locations.html">Locations</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="contact.html">Partner / Franchise</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </div>
+
+  <!-- Subpage Content -->
+  <div class="subpage-container">
+    <h1 class="subpage-title">The Healthy Third Space</h1>
+    <p class="subpage-subtitle">Reclaiming ancient nutrition for the modern day hustle.</p>
+
+    <div style="font-size: 16px; color: var(--text-main); margin-bottom: 32px;">
+      <p style="margin-bottom: 16px;">
+        At <strong>Millet Sips</strong>, we position ourselves at the intersection of traditional home-cooked heritage and fast-paced urban convenience. We believe that office energy shouldn't depend on sugary chemical shots or artificial syrups.
+      </p>
+      <p style="margin-bottom: 16px;">
+        We harvest premium local millets (Ragi, Foxtail, Pearl, and Kodo), wash them with pure mountain water, and slow-brew them with cardamom, mint, and raw honeys to deliver a clean, sustained energy release.
+      </p>
+    </div>
+
+    <!-- Illustration Box -->
+    <div class="illustration-box">
+      <img src="assets/illustrations/01-caffeine-filter.png" alt="Caffeine Swap Illustration">
+      <div class="illustration-caption">Milley filters out the artificial sugars and heavy caffeines, swapping them for clean, organic energy.</div>
+    </div>
+  </div>
+
+  <!-- Sticky Bottom Navigation Bar -->
+  <nav class="sticky-bottom-nav">
+    <a href="locations.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+      </svg>
+      <span>FIND A KIOSK</span>
+    </a>
+    <a href="menu.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+      </svg>
+      <span>OUR MENU</span>
+    </a>
+    <a href="contact.html" class="nav-item">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.099.281L7.5 9a10.518 10.518 0 004.897 4.897l1.703-1.077a1 1 0 011.02-.08l2.2.547a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+      </svg>
+      <span>CONTACT US</span>
+    </a>
+  </nav>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

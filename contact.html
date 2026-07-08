@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partner & Franchise | Millet Sips</title>
+  <meta name="description"
+    content="Bring Millet Sips to your city or tech park. Apply for franchise opportunities and get detailed ROI sheets.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <button class="menu-trigger" aria-label="Menu" onclick="toggleMobileNav(true)">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+      <a href="index.html" class="logo">
+        <span>Millet Sips</span>
+      </a>
+      <ul class="desktop-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Partner / Franchise</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <button class="search-trigger" aria-label="Search" onclick="showToast('Search activated')">
+        <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Overlay -->
+  <div class="mobile-nav-overlay" id="mobileNav" onclick="toggleMobileNav(false)">
+    <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px;">
+        <span style="font-weight: 700; color: var(--primary);">Navigation</span>
+        <button onclick="toggleMobileNav(false)"
+          style="background: none; border: none; font-size: 24px; cursor: pointer;">&times;</button>
+      </div>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="locations.html">Locations</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html" class="active">Partner / Franchise</a>
+      <a href="blog.html">Blog</a>
+    </div>
+  </div>
+
+  <!-- Subpage Content -->
+  <div class="subpage-container">
+    <h1 class="subpage-title">Become a Wellness Partner</h1>
+    <p class="subpage-subtitle">Launch a highly profitable Millet Sip franchise outlet.</p>
+
+    <!-- Franchise Form -->
+    <div class="contact-grid" style="display: grid; gap: 24px; margin-bottom: 32px;">
+      <div
+        style="background: var(--gray-light); border: 1px solid var(--gray-border); padding: 32px; border-radius: var(--border-radius);">
+        <h3 style="margin-bottom: 20px; color: var(--primary);">Apply for Partnership</h3>
+        <form id="partnerPageForm" onsubmit="submitPartnerForm(event)">
+          <div class="form-group">
+            <label for="pName">Full Name</label>
+            <input type="text" id="pName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label for="pEmail">Email Address</label>
+            <input type="email" id="pEmail" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="form-group">
+            <label for="pPhone">Phone Number</label>
+            <input type="tel" id="pPhone" class="form-control" placeholder="Enter your phone number" required>
+          </div>
+          <div class="form-group">
+            <label for="pCity">Target City/Office Campus</label>
+            <input type="text" id="pCity" class="form-control" placeholder="City name" required>
+          </div>
+          <button type="submit" class="cta-button" style="width: 100%; border-radius: 8px;">SUBMIT APPLICATION</button>
+        </form>
+      </div>
+
+      <div
+        style="background: var(--primary-light); border: 1px solid rgba(var(--primary-base), 44%, 28%, 0.1); padding: 32px; border-radius: var(--border-radius); text-align: left;">
+        <h3 style="margin-bottom: 16px; color: var(--primary);">Direct Contact</h3>
+        <p style="margin-bottom: 12px; font-size: 15px; color: var(--text-main);">
+          Have questions or want to speak with our franchise operations team directly?
+        </p>
+        <div style="font-size: 14px; color: var(--text-muted); display: grid; gap: 12px;">
+          <div>📞 <strong>Phone:</strong> +91 9581456699 / +91 8008515615</div>
+          <div>✉️ <strong>Email:</strong> directorogfoods@gmail.com</div>
+          <div>📍 <strong>Corporate Office:</strong> Plot No -1, 2nd floor, Isha Nest, Chitrapuri Hills, Kajaguda,
+            Gachibowli, Hyderabad, Telangana 500104</div>
+        </div>
+      </div>
+
+      <!-- SOP Section -->
+      <div class="sop-section">
+        <h2 style="font-size: 26px; color: var(--primary); margin-bottom: 8px; text-align: center;">Standard Franchise
+          Operational Procedure</h2>
+        <p style="color: var(--text-muted); font-size: 15px; text-align: center; margin-bottom: 24px;">Our step-by-step
+          roadmap to launch your franchise partner journey.</p>
+
+        <div class="sop-timeline">
+          <div class="sop-step">
+            <div class="sop-number">1</div>
+            <div class="sop-text"><strong>Registration Application:</strong> Complete the registration form online or
+              offline with a processing fee of <strong>Rs. 499</strong>.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">2</div>
+            <div class="sop-text"><strong>Review & Call Back:</strong> Within 24 hours, our operational team reviews
+              your application and schedules a one-to-one meeting within 3 working days.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">3</div>
+            <div class="sop-text"><strong>Legal Agreement:</strong> Sign the legal franchise agreement on the meeting
+              day or within 3 working days, with a non-refundable deposit of <strong>Rs. 50,000</strong>.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">4</div>
+            <div class="sop-text"><strong>Site Selection:</strong> Within 48 hours of signing the MoU, site selection
+              begins along with franchise location layout suggestions.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">5</div>
+            <div class="sop-text"><strong>First Establishment Payment:</strong> Deposit <strong>80% of the franchise
+                establishment amount</strong> to start construction and hardware setup.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">6</div>
+            <div class="sop-text"><strong>Technical Training:</strong> Within 3 working days of payment, technical
+              training begins (2 days at company kitchen or training center).</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">7</div>
+            <div class="sop-text"><strong>Franchise Unit Setup:</strong> Complete hardware delivery and kiosk
+              installation within 5 to 15 working days.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">8</div>
+            <div class="sop-text"><strong>Balance Payment:</strong> Deposit the remaining <strong>20% of the franchise
+                establishment amount</strong>.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">9</div>
+            <div class="sop-text"><strong>Onsite Handholding:</strong> 3 days of intensive onsite training at your new
+              franchise establishment location or kiosk.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">10</div>
+            <div class="sop-text"><strong>Inauguration Ceremony:</strong> Launch event, opening day ceremony, along with
+              local promotional support and PR marketing.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">11</div>
+            <div class="sop-text"><strong>Active handholding:</strong> Up to 3 months of company-supported branding,
+              marketing, and operational help.</div>
+          </div>
+          <div class="sop-step">
+            <div class="sop-number">12</div>
+            <div class="sop-text"><strong>Growth Partnership:</strong> Continuous menu innovation, feedback loops, and
+              expansion partnership.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Illustration Box -->
+      <div class="illustration-box">
+        <img src="assets/illustrations/03-franchise-partner.png" alt="Franchise Partner Illustration">
+        <div class="illustration-caption">Milley is building a network of health kiosks, expanding wellness communities
+          nationwide.</div>
+      </div>
+    </div>
+
+    <!-- Sticky Bottom Navigation Bar -->
+    <nav class="sticky-bottom-nav">
+      <a href="locations.html" class="nav-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z">
+          </path>
+        </svg>
+        <span>FIND A KIOSK</span>
+      </a>
+      <a href="menu.html" class="nav-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253">
+          </path>
+        </svg>
+        <span>OUR MENU</span>
+      </a>
+      <a href="contact.html" class="nav-item active">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 00.099.281L7.5 9a10.518 10.518 0 004.897 4.897l1.703-1.077a1 1 0 011.02-.08l2.2.547a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+          </path>
+        </svg>
+        <span>CONTACT US</span>
+      </a>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
