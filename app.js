@@ -149,3 +149,49 @@ function submitPartnerForm(event) {
   }
 }
 
+// Header Search Bar Logic
+function toggleHeaderSearch(show) {
+  const dropdown = document.getElementById('searchDropdown');
+  if (!dropdown) return;
+  
+  if (show === undefined) {
+    dropdown.classList.toggle('active');
+  } else if (show) {
+    dropdown.classList.add('active');
+  } else {
+    dropdown.classList.remove('active');
+  }
+  
+  if (dropdown.classList.contains('active')) {
+    const input = document.getElementById('headerSearchInput');
+    if (input) {
+      input.focus();
+    }
+  }
+}
+
+function handleHeaderSearch(event) {
+  if (event.key === 'Enter') {
+    const query = event.target.value.trim();
+    if (query) {
+      const isInSubfolder = window.location.pathname.includes('/blog/');
+      const basePath = isInSubfolder ? '../' : '';
+      window.location.href = `${basePath}menu.html?search=${encodeURIComponent(query)}`;
+    }
+  }
+}
+
+// Handle incoming search query parameter on load
+document.addEventListener('DOMContentLoaded', () => {
+  const urlParams = new URLSearchParams(window.location.search);
+  const searchQueries = urlParams.get('search');
+  if (searchQueries) {
+    const menuSearch = document.getElementById('menuSearch');
+    if (menuSearch) {
+      menuSearch.value = decodeURIComponent(searchQueries);
+      filterMenuItems();
+    }
+  }
+});
+
+
