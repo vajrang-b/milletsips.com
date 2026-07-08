@@ -160,12 +160,15 @@ function toggleHeaderSearch(show) {
     dropdown.classList.add('active');
   } else {
     dropdown.classList.remove('active');
+    const suggestions = document.getElementById('searchSuggestionsBox');
+    if (suggestions) suggestions.classList.remove('active');
   }
   
   if (dropdown.classList.contains('active')) {
     const input = document.getElementById('headerSearchInput');
     if (input) {
       input.focus();
+      initSuggestions();
     }
   }
 }
@@ -181,6 +184,89 @@ function handleHeaderSearch(event) {
   }
 }
 
+// Autocomplete and live sync logic
+const menuProducts = [
+  { name: 'Ragi Elaichi Chai', category: 'warm', tags: ['ragi', 'elaichi', 'chai', 'tea', 'cardamom', 'hot'] },
+  { name: 'Kangni Lemon Sharbat', category: 'cold', tags: ['foxtail', 'lemon', 'sharbat', 'mint', 'lemonade', 'cold'] },
+  { name: 'Bajra Coco Lassi', category: 'cold', tags: ['pearl', 'bajra', 'coco', 'lassi', 'coconut', 'yogurt', 'cold'] }
+];
+
+function initSuggestions() {
+  const dropdown = document.getElementById('searchDropdown');
+  if (!dropdown) return;
+  
+  let box = document.getElementById('searchSuggestionsBox');
+  if (!box) {
+    box = document.createElement('div');
+    box.id = 'searchSuggestionsBox';
+    box.className = 'search-suggestions';
+    dropdown.appendChild(box);
+  }
+  
+  const input = document.getElementById('headerSearchInput');
+  if (!input) return;
+  
+  input.removeEventListener('input', handleHeaderSearchInput);
+  input.addEventListener('input', handleHeaderSearchInput);
+}
+
+function handleHeaderSearchInput(e) {
+  const query = e.target.value.toLowerCase().trim();
+  const box = document.getElementById('searchSuggestionsBox');
+  if (!box) return;
+  
+  // Sync live search if we are on menu.html
+  const menuSearch = document.getElementById('menuSearch');
+  if (menuSearch) {
+    menuSearch.value = e.target.value;
+    filterMenuItems();
+  }
+  
+  if (!query) {
+    box.classList.remove('active');
+    return;
+  }
+  
+  const matches = menuProducts.filter(prod => 
+    prod.name.toLowerCase().includes(query) || 
+    prod.tags.some(tag => tag.includes(query))
+  );
+  
+  if (matches.length === 0) {
+    box.classList.remove('active');
+    return;
+  }
+  
+  box.innerHTML = '';
+  matches.forEach(prod => {
+    const item = document.createElement('div');
+    item.className = 'suggestion-item';
+    
+    const isInSubfolder = window.location.pathname.includes('/blog/');
+    const basePath = isInSubfolder ? '../' : '';
+    
+    item.innerHTML = `
+      <span>${prod.name}</span>
+      <span class="suggestion-category">${prod.category}</span>
+    `;
+    item.addEventListener('click', () => {
+      window.location.href = `${basePath}menu.html?search=${encodeURIComponent(prod.name)}`;
+    });
+    box.appendChild(item);
+  });
+  
+  box.classList.add('active');
+}
+
+// Close suggestions on outside clicks
+document.addEventListener('click', (e) => {
+  const dropdown = document.getElementById('searchDropdown');
+  const box = document.getElementById('searchSuggestionsBox');
+  if (box && dropdown && !dropdown.contains(e.target)) {
+    box.classList.remove('active');
+  }
+});
+
 // Handle incoming search query parameter on load
 document.addEventListener('DOMContentLoaded', () => {
   const urlParams = new URLSearchParams(window.location.search);
@@ -193,5 +279,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 });
+
 
 
